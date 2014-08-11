@@ -38,13 +38,16 @@ class AboutObjects < Neo::Koan
 
     # THINK ABOUT IT:
     # What pattern do the object IDs for small integers follow?
+    # After some testing in the IRB it appears that it follows the odd numbers  
+    # line like 1,3,5,7,9 for larger numbers 201, 203, 205 etc for the hundreds 
+    # it seems to follow the even numbers numerical line.
   end
 
   def test_clone_creates_a_different_object
     obj = Object.new
     copy = obj.clone
 
-    assert_equal __, obj           != copy
-    assert_equal __, obj.object_id != copy.object_id
+    assert_equal true, obj           != copy
+    assert_equal true, obj.object_id != copy.object_id
   end
 end
